@@ -1,13 +1,10 @@
 // Your code goes here
 
-// NAV - Hover Color Links
+// Mouseover Technique - Hover Color Change Links
 // LINKS
 
 let headerLinks = document.querySelector("nav");
 // console.log(headerLinks)
-
-// Mouseover 'orange' to reset color 'teal'
-// event.target.style.color = "";  (Resets to default color, usually black)
 
 headerLinks.addEventListener("mouseover", function(event){
     event.target.style.color = "orange"
@@ -17,7 +14,7 @@ headerLinks.addEventListener("mouseover", function(event){
   }, 500);
 }, false);
 
-// BODY - Keydown Background Color & Change Text Color
+// Keydown Technique - Press Any Key to Change Background Color & Text Color
 // BODY
 
 let bodyBackground = document.querySelector("body");
@@ -32,4 +29,9 @@ bodyBackground.addEventListener("keydown", function(event){
     }, 500)
 }, false);
 
-//
+//  - Wheel Technique - Image Scaling Large and Small
+// IMAGES
+
+
+
+
