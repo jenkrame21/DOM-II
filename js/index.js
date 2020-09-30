@@ -30,8 +30,27 @@ bodyBackground.addEventListener("keydown", function(event){
 }, false);
 
 //  - Wheel Technique - Image Scaling Large and Small
-// IMAGES
+// IMAGE
+
+let wheelImage = document.querySelector(".intro img");
+// console.log(wheelImage)
 
 
+function zoom(event) {
+    event.preventDefault();
+  
+    scale += event.deltaY * -0.01;
+  
+    // Restrict scale
+    scale = Math.min(Math.max(.125, scale), 4);
+  
+    // Apply scale transform
+    elImg.style.transform = `scale(${scale})`;
+  }
 
+    let scale = 1;
+    const elImg = document.querySelector("img");
+    elImg.onwheel = zoom;
+
+// 
 
