@@ -30,9 +30,9 @@ Fun Bus wants you to make their site more interactive. They are relying on you t
   * `keydown` - [x]
   * `wheel` - [x]
   * `load` - [x]
-  * `focus` - []
-  * `resize`
-  * `scroll`
+  * `focus` - [x]
+  * `resize` - [x]
+  * `scroll` - []
   * `select`
   * `dblclick`
   * `drag / drop`

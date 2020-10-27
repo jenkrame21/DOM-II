@@ -1,6 +1,6 @@
 // Your code goes here
 
-// Mouseover Technique - Hover Color Change Links
+// 1. Mouseover Technique - Hover Color Change Links
 // LINKS
 
 let headerLinks = document.querySelector("nav");
@@ -14,7 +14,7 @@ headerLinks.addEventListener("mouseover", function(event){
     }, 500);
 }, false);
 
-// Keydown Technique - Press Any Key to Change Background Color & Text Color
+// 2. Keydown Technique - Press Any Key to Change Background Color & Text Color
 // BODY
 
 let bodyBackground = document.querySelector("body");
@@ -29,12 +29,11 @@ bodyBackground.addEventListener("keydown", function(event){
     }, 500)
 }, false);
 
-//  - Wheel Technique - Image Scaling Large and Small
+// 3. Wheel Technique - Image Scaling Large and Small
 // IMAGE
 
 let wheelImage = document.querySelector(".intro img");
 // console.log(wheelImage)
-
 
 function zoom(event) {
     event.preventDefault();
@@ -52,7 +51,7 @@ function zoom(event) {
     const elImg = document.querySelector("img");
     elImg.onwheel = zoom;
 
-// Click Technique - Counting clicks on a Button
+// 4. Click Technique - Counting clicks on a Button
 // BUTTON
 
 const signUpButton = document.querySelector(".btn");
@@ -61,10 +60,37 @@ signUpButton.addEventListener('click', event => {
     signUpButton.innerHTML = `Signup Count: ${event.detail}`;
 });
 
-// Load Technique - logs event when page is fully loaded
+// 5. Load Technique - logs event when page is fully loaded
 
 window.onload = (event) => {
     console.log('The page is fully loaded!');
 };
 
-// 
+// 6. Focus / 7. Blur Technique - focuses on signup forms
+
+const location = document.querySelector('input[placeholder="Location"]');
+
+location.addEventListener('focus', (event) => {
+    event.target.style.background = 'pink';    
+});
+
+location.addEventListener('blur', (event) => {
+    event.target.style.background = '';    
+});
+
+// 8. Resize Technique - Window resizer
+
+const heightResult = document.querySelector('#height');
+const widthResult = document.querySelector('#width');
+
+function reportWindowSize() {
+    heightResult.textContent = window.innerHeight;
+    widthResult.textContent = window.innerWidth;
+}
+
+window.onresize = reportWindowSize;
+
+// 9. Scroll Technique
+
+
+
