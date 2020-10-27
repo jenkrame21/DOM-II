@@ -32,9 +32,6 @@ bodyBackground.addEventListener("keydown", function(event){
 // 3. Wheel Technique - Image Scaling Large and Small
 // IMAGE
 
-let wheelImage = document.querySelector(".intro img");
-// console.log(wheelImage)
-
 function zoom(event) {
     event.preventDefault();
 
@@ -62,7 +59,7 @@ signUpButton.addEventListener('click', event => {
 
 // 5. Load Technique - logs event when page is fully loaded
 
-window.onload = (event) => {
+window.onload = () => {
     console.log('The page is fully loaded!');
 };
 
