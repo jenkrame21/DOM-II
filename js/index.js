@@ -89,5 +89,36 @@ window.onresize = reportWindowSize;
 
 // 9. Scroll Technique
 
+let scrollStartingPoint = 0;
+let ticking = false;
 
+function scrollingFunction (scroll_pos) {
+    const redBtn = document.querySelector('.btn')
+    redBtn.addEventListener('mouseover', () => {
+        scroll_pos.target.style.color = "red"
+    })
+}
 
+window.addEventListener('scroll', (event) => {
+    scrollStartingPoint = window.scrollY;
+
+    if (!ticking) {
+        window.requestAnimationFrame(function() {
+            scrollingFunction (scrollStartingPoint);
+            ticking = false;
+        });
+
+        ticking = true;
+    }
+});
+
+// 10. Select Technique - Event fires when text is selected
+
+function highlightSelection(event) {
+    const highlight = document.getElementById('highlight');
+    const selection = event.target.value.substring(event.target.selectionStart, event.target.selectionEnd);
+    highlight.textContent = `You selected: ${selection}`;
+}
+    
+const result = document.querySelector('.center');
+result.addEventListener('select', highlightSelection);
